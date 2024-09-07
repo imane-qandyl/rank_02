@@ -17,36 +17,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char **ft_split(char *s)
+char    **ft_split(char *str)
 {
-	int i = 0;
-	int j = 0;
-	int k;
-    if (!s)
-        return(NULL);
-	char **split = malloc(1024);
-	while(s[i] == 32)
-		i++;
-	while(s[i])
-	{
-		if(s[i] > 32)
-		{
-			k = 0;
-			split[j] = malloc(1024);
-			while(s[i] > 32)
-			{
-
-				split[j][k++] = s[i++];
-			}
-			split[j][k] = '\0';
-			j++;
-		}
-		else
-			i++;
-	}
-	split[j] = 0;
-	return split;
+    char **split;
+    int i = 0;
+    int k;
+    int j = 0;
+    split = malloc(1024);
+    while(str[i] == 32)
+        i++;
+    while(str[i])
+    {
+        if(str[i] > 32)
+        {
+            k = 0;
+            split[j] = malloc(1024);
+            while(str[i] > 32)
+            {
+                split[j][k++] = str[i++];
+            }
+            split[j][k] = '\0';
+            j++;
+        }
+        else
+            i++;
+    }
+    split[j] = 0;
+    return split;
 }
-
-
 

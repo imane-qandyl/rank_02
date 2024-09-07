@@ -74,5 +74,9 @@ int main(int argc ,char **argv)
             i++;
         }
     }
-    write(1,"\n",1);
+    else
+    {
+         write(1,"\n",1);
+    }
+   
 }
