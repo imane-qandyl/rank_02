@@ -27,15 +27,15 @@ void ft_inter(char *s1,char *s2)
   char seen[256] = {0};
   while(*s2)
   {
-    seen[*s2] = 1;//each present
+    seen[(unsigned char)*s2] = 1;//each present
     s2++;
   }
   while(*s1)
   {
-    if(seen[*s1] == 1)
+    if(seen[(unsigned char)*s1] == 1)
     {
         write(1,s1,1);
-        seen[*s1] = 0; //prented
+        seen[(unsigned char)*s1] = 0; //prented
     }
     s1++;
   }
