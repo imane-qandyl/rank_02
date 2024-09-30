@@ -12,6 +12,8 @@
 
 char *ft_itoa(int nbr)
 {
+    if(nbr == -2147483648)
+		return("-2147483648\0");
     int n = nbr;
     int len = 0;
 
