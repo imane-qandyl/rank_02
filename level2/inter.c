@@ -27,7 +27,7 @@ void ft_inter(char *s1,char *s2)
   char seen[256] = {0};
   while(*s2)
   {
-    seen[(unsigned char)*s2] = 1;//each present
+    unsigned seen[(unsigned char)*s2] = 1;//each present
     s2++;
   }
   while(*s1)
