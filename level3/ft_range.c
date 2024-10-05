@@ -19,6 +19,8 @@
 // - With (0, -3) you will return an array containing 0, -1, -2 and -3.
 
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int *ft_range(int start, int end)
 {

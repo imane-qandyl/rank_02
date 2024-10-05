@@ -40,10 +40,12 @@ void	rostring(char *s)
 	int j = 0;
 	int k = 0;
 	char *p = malloc(1024);
+	char *start = p;
 	while(*s && *s == ' ')
 		s++;
 	while(*s && *s != ' ')
 		p[i++]= *(s)++; // first word
+	p[i] = '\0';
 	while(*s)
 	{
 		if(*s == ' ' || *s == '\t')
@@ -51,8 +53,8 @@ void	rostring(char *s)
 			s++;
 			if(*s != '\0' && *s != ' ')
 			{
-				if(j == 1) // flag means we previously processed characters we should p "\n" befor the current word
-					write(1, " ", 1);//separate the words
+				if(j == 1)
+					write(1, " ", 1);
 				else 
 					j = 1;
 			}
@@ -62,11 +64,12 @@ void	rostring(char *s)
 			write(1, s++,1);
 			k = 1;
 		}
-	}	
+	}
 	if(k == 1)
 		write(1, " ", 1);
-	while(*p)
-		write(1, p++, 1);
+	while (*start)
+		write(1, start++, 1);
+	free(p);
 }
 
 int main(int ac, char **av)

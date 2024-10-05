@@ -46,3 +46,18 @@ char    **ft_split(char *str)
     return split;
 }
 
+// int main(void)
+// {
+//     char str[] = "Hello world this is a test";
+//     char **result = ft_split(str);
+//     int i = 0;
+
+//     while (result[i])
+//     {
+//         printf("%s\n", result[i]);
+//         free(result[i]);  // Free each allocated string
+//         i++;
+//     }
+//     free(result);  // Free the outer array
+//     return 0;
+// }

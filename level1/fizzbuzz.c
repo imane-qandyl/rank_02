@@ -47,6 +47,7 @@ void putnb(int nb)
 }
 int main(int argc, char **argv)
 {
+    (void)argv;
     int i = 1;
     if(argc == 1)
     {

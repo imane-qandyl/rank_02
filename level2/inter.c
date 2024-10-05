@@ -24,10 +24,10 @@
 #include <unistd.h>
 void ft_inter(char *s1,char *s2)
 {
-  char seen[256] = {0};
+   unsigned char seen[256] = {0};
   while(*s2)
   {
-    unsigned seen[(unsigned char)*s2] = 1;//each present
+    seen[(unsigned char)*s2] = 1;//each present
     s2++;
   }
   while(*s1)

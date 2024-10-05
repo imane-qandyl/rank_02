@@ -31,6 +31,7 @@ void ft_putnbr(int number)
 
 int main(int argc, char **argv)
 {
+    (void)argv;
     if (argc <= 1)
         ft_putnbr(0);
     else

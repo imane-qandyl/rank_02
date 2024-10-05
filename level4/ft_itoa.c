@@ -9,6 +9,9 @@
 // Your function must be declared as follows:
 
 // char	*ft_itoa(int nbr);
+#include <stdlib.h>
+#include <stdio.h>
+
 
 char *ft_itoa(int nbr)
 {
@@ -44,34 +47,11 @@ char *ft_itoa(int nbr)
     return (res);
 }
 
-char *ft_itoa(int nbr)
+int main(void)
 {
-    int nb = nbr;
-    int *res = 0;
-    int len = 0;
-    if(nbr <= 0)
-        len++;
-    while(nb)
-    {    nb /= 10;
-        len++;}
-    res = malloc(sizeof(char *) * len + 1);
-    res[len] = '\0';
-    if(nbr == 0)
-    {
-        res[0] = '0';
-        return(res);
-    }
-    if(nbr < 0)
-    {
-        res[0] = '-';
-        nbr = -nbr;
-    }
-    while(nbr)
-    {
-        res[--len] = nbr % 10 + '0';
-        nbr /= 10;
-    }
-    return(res);
-
-
+    int num = -12345;
+    char *str = ft_itoa(num);
+    printf("%s\n", str);
+    free(str);
+    return 0;
 }
