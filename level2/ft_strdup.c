@@ -21,6 +21,7 @@ char    *ft_strdup(char *src)
     len++;
   }
   dst = malloc(len + 1);
+  res[len] = '\0';
   while(i < len)
   {
     dst[i] = src[i];
